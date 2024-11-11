@@ -7,7 +7,7 @@ export default function Layout() {
   return (
     <Stack
       screenOptions={{
-        headerTitle: "Sinhala Chat Bot",
+        headerTitle: "සිංhala Chatබොට්",
         headerTitleAlign: "center",
         headerStyle: { backgroundColor: "#f8f8f8" },
         headerTitleStyle: { fontWeight: "bold", fontSize: 20 },

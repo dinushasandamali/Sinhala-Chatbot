@@ -17,9 +17,11 @@
     },
     "android": {
       "adaptiveIcon": {
+        "package": "com.jfn.SinhalaChatBot",
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dinusha_eng.chatbotapp"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +33,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "54f51cd4-2e93-4c34-9eff-cc3c27756af5"
+      }
     }
   }
 }

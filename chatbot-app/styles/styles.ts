@@ -1,84 +1,96 @@
-// styles.ts
-import { StyleSheet } from "react-native";
-import Constants from "expo-constants";
+import { StyleSheet, Dimensions, PixelRatio, Platform } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
+const scale = width / 375;  // Assuming 375px as the base width (e.g., iPhone X)
+
+function responsiveFontSize(size: number) {
+  return PixelRatio.roundToNearestPixel(size * scale);
+}
+
+function responsiveSize(size: number) {
+  return PixelRatio.roundToNearestPixel(size * scale);
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#202123",
+    backgroundColor: '#202123',
+  },
+  messagesContainer: {
+    flex: 1,
+    padding: responsiveSize(10),
   },
   messageContainer: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    marginVertical: 5,
-    marginHorizontal: 10,
+    marginVertical: responsiveSize(5),
   },
   botMessageContainer: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    marginVertical: 5,
-  },
-  botMessage: {
-    backgroundColor: "#2C3E50",
-    borderRadius: 10,
-    padding: 10,
-    maxWidth: '70%',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   userMessageContainer: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    marginVertical: 5,
-    marginLeft: "auto",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  botMessage: {
+    backgroundColor: '#e1e1e1',
+    borderRadius: responsiveSize(10),
+    padding: responsiveSize(10),
+    marginLeft: responsiveSize(5),
+    maxWidth: width * 0.75, // Ensure messages fit within screen width
   },
   userMessage: {
-    backgroundColor: "#153982",
-    borderRadius: 10,
-    padding: 10,
-    maxWidth: '70%',
+    backgroundColor: '#4a90e2',
+    borderRadius: responsiveSize(10),
+    padding: responsiveSize(10),
+    marginRight: responsiveSize(5),
+    maxWidth: width * 0.75, // Ensure messages fit within screen width
   },
   botMessageText: {
-    fontSize: 16,
-    color: "#FFFFFF",
-    marginRight: 10,
+    color: '#000',
+    fontSize: responsiveFontSize(14),
   },
   userMessageText: {
-    fontSize: 16,
-    color: "#FFFFFF",
-    marginRight: 10,
+    color: '#fff',
+    fontSize: responsiveFontSize(14),
+  },
+  botIcon: {
+    width: responsiveSize(30),
+    height: responsiveSize(30),
+    marginRight: responsiveSize(5),
+  },
+  userIcon: {
+    width: responsiveSize(30),
+    height: responsiveSize(30),
+    marginLeft: responsiveSize(5),
+  },
+  loadingText: {
+    alignSelf: 'center',
+    color: '#888',
+    marginVertical: responsiveSize(10),
+    fontSize: responsiveFontSize(14),
   },
   inputContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-    borderTopWidth: 1,
-    borderTopColor: "#444444",
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: responsiveSize(10),
+    backgroundColor: '#fff',
   },
   input: {
     flex: 1,
-    fontSize: 16,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: "#444444",
-    borderRadius: 10,
-    marginRight: 10,
-    backgroundColor: "#FFFFFF",
+    padding: responsiveSize(10),
+    backgroundColor: '#ffffff',
+    borderRadius: responsiveSize(10),
+    fontSize: responsiveFontSize(14),
+    borderColor: '#202123', // Light gray border color
+    borderWidth: 1, // Border width to make the border visible
+    color: '#333', // Text color
+    marginRight: responsiveSize(10),
   },
   sendIcon: {
-    width: 30,
-    height: 30,
-    marginLeft: 10,
-    tintColor: "#007BFF",
-  },
-  userIcon: {
-    width: 30,
-    height: 30,
-    marginLeft: 10,
-  },
-  botIcon: {
-    width: 30,
-    height: 30,
-    marginRight: 10,
+    width: responsiveSize(30),
+    height: responsiveSize(30),
+    marginLeft: responsiveSize(10),
   },
 });
 
