@@ -14,7 +14,9 @@ This is a chatbot app built with React Native using Expo. It integrates with ext
 - **Other:** TypeScript, Gradio Client
 
 ## 📝 Setup Instructions
-1. Clone the repository:
    ```bash
-   git clone https://github.com/dinushasandamali/Rag_Project.git
+   git clone https://github.com/dinushasandamali/Sinhala-Chatbot.git
+   cd Sinhala-Chatbot
+   npm install
+   npx expo start
 
