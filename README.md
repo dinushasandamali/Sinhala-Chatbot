@@ -13,3 +13,8 @@ This is a chatbot app built with React Native using Expo. It integrates with ext
 - **Backend:** FastAPI
 - **Other:** TypeScript, Gradio Client
 
+## 📝 Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dinushasandamali/Rag_Project.git
+
