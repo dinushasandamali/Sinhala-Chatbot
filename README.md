@@ -1,5 +1,11 @@
 # Sinhala Chatbot
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6d3d1e32-3a51-4d80-9cc5-afdba610c091" alt="Image 1" width="30%" />
+  <img src="https://github.com/user-attachments/assets/d157ab30-dbdc-4635-aa91-6abc54ba4945" alt="Image 2" width="30%" />
+  <img src="https://github.com/user-attachments/assets/244a7c5a-0420-41de-a80e-631bac5c7529" alt="Image 3" width="30%" />
+</p>
+
 ## 📚 Overview
 This is a chatbot app built with React Native using Expo. It integrates with external APIs and supports AI-powered interactions.
 
